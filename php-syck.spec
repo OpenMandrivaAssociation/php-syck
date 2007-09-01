@@ -5,7 +5,7 @@
 Summary:	YAML-1.0 parser and emitter
 Name:		php-%{modname}
 Version:	0.9.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/syck
@@ -39,6 +39,8 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 perl -pi -e "s|/lib\b|/%{_lib}|g" config.m4
 
 %build
+%serverbuild
+
 phpize
 %configure2_5x --with-libdir=%{_lib} \
     --with-%{modname}=shared,%{_prefix}
