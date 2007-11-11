@@ -5,7 +5,7 @@
 Summary:	YAML-1.0 parser and emitter
 Name:		php-%{modname}
 Version:	0.9.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/syck
@@ -59,6 +59,18 @@ install -m0755 %{soname} %{buildroot}%{_libdir}/php/extensions/
 cat > %{buildroot}%{_sysconfdir}/php.d/%{inifile} << EOF
 extension = %{soname}
 EOF
+
+%post
+if [ -f /var/lock/subsys/httpd ]; then
+    %{_initrddir}/httpd restart >/dev/null || :
+fi
+
+%postun
+if [ "$1" = "0" ]; then
+    if [ -f /var/lock/subsys/httpd ]; then
+	%{_initrddir}/httpd restart >/dev/null || :
+    fi
+fi
 
 %clean
 rm -rf %{buildroot}
