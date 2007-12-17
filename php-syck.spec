@@ -14,7 +14,6 @@ Requires:	php-hash
 BuildRequires:	php-devel >= 3:5.2.1
 BuildRequires:	file
 BuildRequires:	syck-devel >= 0.55
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A binding to the Syck library.  YAML(tm) (rhymes with "camel") is a
