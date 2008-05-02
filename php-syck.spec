@@ -5,7 +5,7 @@
 Summary:	YAML-1.0 parser and emitter
 Name:		php-%{modname}
 Version:	0.9.2
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/syck
@@ -14,7 +14,7 @@ Requires:	php-hash
 BuildRequires:	php-devel >= 3:5.2.1
 BuildRequires:	file
 BuildRequires:	syck-devel >= 0.55
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A binding to the Syck library.  YAML(tm) (rhymes with "camel") is a
