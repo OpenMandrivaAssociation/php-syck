@@ -5,7 +5,7 @@
 Summary:	YAML-1.0 parser and emitter
 Name:		php-%{modname}
 Version:	0.9.3
-Release:	%mkrel 6
+Release:	%mkrel 7
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/syck
