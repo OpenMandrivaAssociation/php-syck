@@ -10,6 +10,7 @@ Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/syck
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+Patch0:		syck-0.9.3-php54x.diff
 Requires:	php-hash
 BuildRequires:	php-devel >= 3:5.2.1
 BuildRequires:	file
@@ -27,6 +28,8 @@ filtering.
 
 %setup -q -n %{modname}-%{version}
 [ "../package*.xml" != "/" ] && mv ../package*.xml .
+
+%patch0 -p0
 
 # fix permissions
 find . -type f | xargs chmod 644
