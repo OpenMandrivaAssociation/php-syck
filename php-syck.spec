@@ -8,7 +8,7 @@ Version:	0.9.3
 Release:	21
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/syck
+URL:		https://pecl.php.net/package/syck
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		syck-0.9.3-php54x.diff
 Requires:	php-hash
